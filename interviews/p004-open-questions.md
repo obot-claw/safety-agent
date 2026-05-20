@@ -69,7 +69,7 @@
 
 ## P004-API-Q004: Legacy API compatibility
 
-**Status:** draft  
+**Status:** decided  
 **Source:** P004 overview open questions  
 **Context:** Preserving the legacy API reduces migration friction, but a clean API may be better for long-term renderer quality.  
 **Question:** Should the first migration preserve the legacy public API exactly, or should we introduce a new API and provide a compatibility wrapper?
@@ -80,11 +80,11 @@
 2. Introduce a new API and provide a compatibility wrapper.
 3. Introduce a new API only; document breaking changes.
 
-**Asked in Telegram:**  
-**Answer:**  
-**Decision:**  
-**Follow-up artifacts:**  
-**Notes:**
+**Asked in Telegram:** 2026-05-20  
+**Answer:** Option 3: breaking changes are fine. These will ultimately be new major-version releases, or possibly entirely new packages.  
+**Decision:** Do not preserve the legacy API or add compatibility wrappers by default. Design a clean nextgen API and document breaking changes. Treat compatibility wrappers as optional future work only if a concrete migration need appears.  
+**Follow-up artifacts:** Safety Histogram implementation plan, package naming/versioning decisions, release notes.  
+**Notes:** Nextgen packages should be allowed to release as `vX.0.0` major versions or as new packages if naming/governance points that way.
 
 ## P004-ARCH-Q005: Static chart API location
 
