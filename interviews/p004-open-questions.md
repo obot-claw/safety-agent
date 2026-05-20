@@ -31,7 +31,7 @@
 
 ## P004-ARCH-Q002: Chart.js scope
 
-**Status:** draft  
+**Status:** decided  
 **Source:** P004 overview open questions  
 **Context:** Chart.js is the reference pattern from `gsm.viz`, but some clinical displays may need custom SVG/Canvas layers.  
 **Question:** Should Chart.js be mandatory for every renderer, or should some displays stay custom SVG/Canvas where Chart.js is not a good fit?
@@ -42,11 +42,11 @@
 2. Chart.js is preferred, but custom SVG/Canvas is allowed with justification.
 3. Decide renderer-by-renderer after requirements harvesting.
 
-**Asked in Telegram:**  
-**Answer:**  
-**Decision:**  
-**Follow-up artifacts:**  
-**Notes:**
+**Asked in Telegram:** 2026-05-20  
+**Answer:** Jeremy agreed with option 2: Chart.js is preferred, but custom SVG/Canvas is allowed with justification.  
+**Decision:** Use Chart.js as the default reference implementation pattern, aligned with gsm.viz. Allow custom SVG/Canvas for renderer features where Chart.js is not a good fit, but require explicit justification, tests, and design documentation for exceptions.  
+**Follow-up artifacts:** Chart.js migration skill, renderer modernization plans, per-renderer design docs.  
+**Notes:** This keeps consistency without forcing complex clinical display requirements into unsuitable Chart.js abstractions.
 
 ## P004-TEST-Q003: Qualification-ready testing standard
 
