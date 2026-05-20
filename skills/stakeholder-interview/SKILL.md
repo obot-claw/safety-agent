@@ -43,3 +43,7 @@ Default location:
 For P004:
 
 `interviews/p004-open-questions.md`
+
+## Recommendation requirement
+
+Whenever possible, include your recommended answer before asking Jeremy to decide. Keep it concise: state the recommendation, why it is preferred, and the main pros/cons of the realistic alternatives. Do not overstate certainty; surface assumptions and ask for correction when needed.

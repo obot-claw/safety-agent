@@ -90,3 +90,7 @@ A completed interview entry should let a future agent understand:
 - what Jeremy answered
 - what decision was made
 - what implementation or documentation changed as a result
+
+## Recommendation requirement
+
+When asking Jeremy an interview question, include obot's recommendation whenever possible, along with a short justification and concise pros/cons for the realistic options. Skip a recommendation only when the question is purely factual or when there is not enough context to form a defensible position.

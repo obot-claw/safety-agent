@@ -12,7 +12,7 @@
 
 ## P004-ARCH-Q001: Repository structure
 
-**Status:** draft  
+**Status:** decided  
 **Source:** P004 overview open questions  
 **Context:** We need to decide whether modernization work happens package-by-package or in a consolidated repo once the migration path is clearer.  
 **Question:** Should each renderer remain its own npm package, or should we consolidate into a monorepo once the migration path is clear?
@@ -23,11 +23,11 @@
 2. Move to a monorepo for shared tooling and coordinated releases.
 3. Keep separate now, revisit after Safety Histogram spike.
 
-**Asked in Telegram:**  
-**Answer:**  
-**Decision:**  
-**Follow-up artifacts:**  
-**Notes:**
+**Asked in Telegram:** 2026-05-20  
+**Answer:** Option 3: keep separate packages now, revisit after Safety Histogram spike. Jeremy also requested future interview questions include obot's recommendation and short pros/cons whenever possible.  
+**Decision:** Keep the current fork-per-renderer structure for P004 while using Safety Histogram as the first migration spike. Revisit monorepo consolidation after the spike clarifies shared tooling, release coupling, and common architecture needs.  
+**Follow-up artifacts:** P004 overview, Safety Histogram migration plan, future repository governance docs.  
+**Notes:** This avoids premature consolidation while still preserving the option to move to a monorepo once evidence exists.
 
 ## P004-ARCH-Q002: Chart.js scope
 
