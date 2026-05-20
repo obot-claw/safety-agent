@@ -50,7 +50,7 @@
 
 ## P004-TEST-Q003: Qualification-ready testing standard
 
-**Status:** draft  
+**Status:** decided  
 **Source:** P004 overview open questions  
 **Context:** The new renderers should move toward GxP-oriented evidence, but we need a practical minimum standard for early migrations.  
 **Question:** What is the minimum testing standard for a renderer to be considered close to qualification-ready?
@@ -61,11 +61,11 @@
 2. Add visual regression tests for key display states as mandatory evidence.
 3. Define a stricter formal validation package later; use traceable automated tests for now.
 
-**Asked in Telegram:**  
-**Answer:**  
-**Decision:**  
-**Follow-up artifacts:**  
-**Notes:**
+**Asked in Telegram:** 2026-05-20  
+**Answer:** Jeremy indicated this was already answered by the safety-agent implementation-framework spike and filed as https://github.com/obot-claw/safety-agent/issues/1.  
+**Decision:** Treat qualification readiness as a traceable implementation framework: requirements harvested from legacy wikis, mapped to unit, integration, browser, visual-regression, accessibility, and review-evidence checks. The detailed minimum standard will be defined in the safety-agent spike before substantive Safety Histogram migration work proceeds.  
+**Follow-up artifacts:** https://github.com/obot-claw/safety-agent/issues/1, safety-agent implementation playbook, GxP test framework docs, renderer migration templates.  
+**Notes:** Do not re-ask this question unless the spike leaves a narrower unresolved testing-standard decision.
 
 ## P004-API-Q004: Legacy API compatibility
 
