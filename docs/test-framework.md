@@ -42,3 +42,7 @@ From the upstream technical documentation, the replacement renderer needs tests 
 - click-through detail listing
 - grouped/small-multiple histogram behavior
 - normality and distribution comparison p-value annotations
+
+## gsm.viz reference testing pattern
+
+Mirror the `gsm.viz` test style where practical: JSON schemas for input contracts, Jest tests for schema/config/data transformation behavior, jsdom plus `jest-canvas-mock` for renderer integration, and static examples for human review. Add requirement IDs from the harvested RhoInc wiki to test names or metadata so tests are traceable.

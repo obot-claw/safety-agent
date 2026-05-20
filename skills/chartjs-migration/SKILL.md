@@ -18,3 +18,7 @@ Use when replacing Webcharts rendering with Chart.js or deciding whether Chart.j
 4. Add browser tests for interactions.
 5. Add visual baselines for default and edge states.
 6. Keep the adapter thin so another renderer could replace Chart.js if needed.
+
+## gsm.viz pattern
+
+For migrated renderer modules, prefer the gsm.viz flow: validate inputs with schemas, configure defaults, create/replace a canvas, structure data into Chart.js datasets, build plugins/scales separately, instantiate Chart.js, and attach explicit update helpers. Keep clinical requirements outside opaque Chart.js config where possible.

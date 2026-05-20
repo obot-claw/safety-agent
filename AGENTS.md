@@ -13,6 +13,10 @@ Modernize SafetyGraphics JavaScript renderers with a GxP-oriented engineering di
 - Every migration PR must state which requirements it covers and which tests provide evidence.
 - Do not claim GxP validation. Use language like "GxP-oriented", "qualification-ready evidence", or "traceability support" unless a formal validation process exists.
 
+## Reference architecture
+
+Use gsm.viz as the reference implementation for nextgen JavaScript renderer architecture: ES modules, Chart.js, data schemas, `checkInputs()` -> `configure()` -> `structureData()` -> Chart.js render flow, Jest/jsdom/canvas tests, and static examples. See `docs/gsm-viz-reference.md`.
+
 ## Required artifacts per renderer
 
 - `docs/requirements/<renderer>-requirements.md`

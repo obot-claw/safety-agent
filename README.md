@@ -14,6 +14,10 @@ The framework is designed to keep migration work traceable:
 4. document each behavior change and design decision,
 5. keep static and interactive safety displays aligned where practical.
 
+## Reference implementation
+
+Use `gsm.viz` as the JavaScript architecture reference for nextgen renderer work. It provides the Chart.js/esbuild/Jest pattern currently used under GSM reporting. See `docs/gsm-viz-reference.md`.
+
 ## Starting scope
 
 First renderer: `safety-histogram`
