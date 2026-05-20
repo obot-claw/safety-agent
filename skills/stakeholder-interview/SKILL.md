@@ -50,10 +50,9 @@ Whenever possible, include your recommended answer before asking Jeremy to decid
 
 ## Telegram formatting rules
 
-Use the interview prefix `😺📝` for interview prompts. Always include the actual question text, not just the question ID. Keep each Telegram message short enough to avoid truncation; if context plus options plus recommendation is long, split into multiple messages. Preferred split:
+Use the interview prefix `😺📝` for interview prompts. Always include the actual question text, not just the question ID. Keep each Telegram message short enough to avoid truncation; if context plus options plus recommendation is long, split into multiple messages. Required split for most interview prompts:
 
-1. `😺📝 Interview <ID>` with context and exact question.
-2. Recommendation and short pros/cons.
-3. Options, if needed.
+1. First message: `😺📝 Interview <ID>` with the exact question only plus minimal context.
+2. Immediate follow-up message: recommendation, short justification, and pros/cons/options if useful.
 
-Do not rely on one long message for nuanced architectural questions.
+Do not combine the question and recommendation in one long message. Do not send a question without the immediate recommendation follow-up unless Jeremy explicitly asks for question-only mode.
