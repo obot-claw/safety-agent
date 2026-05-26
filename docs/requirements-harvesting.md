@@ -20,3 +20,15 @@
 ## Output format
 
 Use the template in `templates/requirements-matrix.md`.
+
+## AI review stage
+
+Raw harvesting is intentionally broad. Before human review, run:
+
+```bash
+./scripts/ai_review_requirements.py
+```
+
+The AI review stage removes obvious non-requirements, merges orphaned code/settings snippets into nearby rows, marks clean rows as `ai-reviewed`, flags ambiguous rows as `needs-jeremy-review`, and creates `interviews/p004-grill-queue.md` for Telegram/grill-me follow-up.
+
+Rows marked `needs-jeremy-review` should not block documentation, but they should be resolved before implementation is called complete for that renderer.

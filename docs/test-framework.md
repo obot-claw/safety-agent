@@ -26,6 +26,19 @@ This framework defines how nextgen SafetyGraphics renderers should prove behavio
    - every requirement row has a status, evidence type, and test/evidence link before a migration is considered complete.
    - Evidence: requirements matrix completeness check.
 
+
+## AI review stage
+
+After raw harvesting and before Jeremy review, run `scripts/ai_review_requirements.py`. This stage should:
+
+- remove obvious link/image/overview artifacts;
+- merge orphaned settings snippets into the previous requirement notes;
+- mark standalone rows as `ai-reviewed`;
+- flag unclear, legacy-specific, vague, statistical, or compound rows as `needs-jeremy-review`;
+- write grill-me candidates to `interviews/p004-grill-queue.md`.
+
+AI review is not approval. It is a cleanup and triage step that makes Jeremy's review tractable.
+
 ## Evidence types
 
 Use these values consistently in requirement matrices:
@@ -53,13 +66,14 @@ Use these values consistently in requirement matrices:
 A nextgen renderer is not ready for review until:
 
 1. All wiki sources have been harvested into `docs/requirements/<renderer>.md`.
-2. The matrix has been manually reviewed to remove duplicates and split compound rows.
-3. A baseline legacy demo link and nextgen demo link exist.
-4. Every reviewed requirement has an evidence type.
-5. Core behavior has automated or browser evidence.
-6. Known gaps are documented in README and PR body.
-7. Browser QA confirms no unexpected console errors on the review demo.
-8. The PR states what is implemented, deferred, replaced, and still risky.
+2. The matrix has passed AI review to remove obvious parsing artifacts and flag unclear rows.
+3. Jeremy has reviewed or deferred rows marked `needs-jeremy-review`, usually through the grill-me/interview workflow.
+4. A baseline legacy demo link and nextgen demo link exist.
+5. Every reviewed requirement has an evidence type.
+6. Core behavior has automated or browser evidence.
+7. Known gaps are documented in README and PR body.
+8. Browser QA confirms no unexpected console errors on the review demo.
+9. The PR states what is implemented, deferred, replaced, and still risky.
 
 ## Browser QA note template
 
