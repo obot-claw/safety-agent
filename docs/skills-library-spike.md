@@ -126,3 +126,21 @@ Use before implementation or PR review. Should enforce:
 ## Decision
 
 Adopt external skills as references, not dependencies. Build and maintain a narrow local P004 skills library inside `safety-agent`, with clear validation and security guardrails.
+
+## Follow-up decision: bounded test-driver sub-agent
+
+Jeremy approved creating a bounded test-driver sub-agent for P004. The sub-agent should use the local `p004-test-driver` skill and `templates/p004-test-driver-prompt.md` prompt template. It owns requirement-to-test mapping and QA evidence, not product implementation or requirement rewriting.
+
+## qcthat idea: JS evidence bridge
+
+Jeremy also asked to file an idea around using `gilead-biostat/qcthat` as part of the test-agent workflow. `qcthat` currently focuses on R package qualification by linking GitHub issues to `{testthat}` evidence. The same model is relevant for P004 if `qcthat` or an adapter can ingest Vitest and Playwright reports.
+
+Candidate direction:
+
+- Keep GitHub issues or matrix rows as the requirement source.
+- Require Vitest/Playwright test names to include requirement IDs and/or issue IDs.
+- Export Vitest JSON/JUnit and Playwright JSON/JUnit.
+- Add an adapter that normalizes JS test results into a qcthat-compatible issue/test/evidence matrix.
+- Use the test-driver sub-agent to maintain coverage notes and blocked/manual rows.
+
+This should be tracked as a future project idea, not a dependency for the first P004 renderer migration.
