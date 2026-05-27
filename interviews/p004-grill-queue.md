@@ -50,6 +50,8 @@ Recommendation: preserve the legacy method only if we can identify it exactly an
 
 ## safety-histogram
 
+Current status: answered decisions have been applied to the matrix for normal-range splitting, x-axis control splitting, linked-table lead-in removal, external info links, and disclaimer removal. P-value/statistical rows are blocked until exact legacy methods and fixture outputs are identified.
+
 ### Q-SH-001 — Normal range behavior split
 
 Status: answered by Jeremy on 2026-05-26 — yes.
