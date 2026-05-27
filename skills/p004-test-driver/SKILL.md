@@ -8,6 +8,16 @@ description: Use when acting as the bounded test-driver sub-agent for P004 rende
 
 Act as an independent test-driver for a P004 renderer migration. Your job is to turn reviewed requirements into executable evidence and expose gaps. You are not the product implementer.
 
+
+## Split-phase operation
+
+Use two narrower skills under this umbrella:
+
+1. `p004-test-setup` — inspect requirements/repo readiness, install or propose Vitest/Playwright dependencies, define fixtures/selectors, and prepare the test harness.
+2. `p004-write-tests` — write actual Vitest/Playwright tests for reviewed requirement rows.
+
+A test-driver trial should not stop at planning when setup is explicitly approved. After setup, it should write executable tests, even if they initially fail against the current implementation.
+
 ## Inputs
 
 - Renderer repository or demo branch.
